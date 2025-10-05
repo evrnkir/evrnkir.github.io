@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evren Yazar | Stratejik Analiz & Teknoloji</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        /* ----------------------------------------------------
+           CSS STİLLERİ (SOFİSTİKE DARK MODE)
+           ----------------------------------------------------
+        */
+        :root {
+            --color-bg: #1A1A2E;     /* Derin Gece Mavisi Arka Plan */
+            --color-text: #EAEAEA;   /* Yumuşak Beyaz Yazı */
+            --color-accent: #64FFDA; /* Açık Nane Yeşili/Turkuaz Aksan */
+            --color-secondary: #BB86FC; /* Yumuşak Mor Aksan */
+            --color-card: #2C2C45;   /* Kart/Bölme Arka Planı */
+            --color-border: #444466; /* Yumuşak Çizgi */
+            --color-hover-bg: #3C3C5A; /* Hafif Koyu Hover */
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif; 
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            padding: 60px 20px;
+            margin: 0 auto;
+        }
+        
+        /* BAŞLIK / GİRİŞ (HERO) BÖLÜMÜ */
+        .hero-header {
+            text-align: center;
+            padding: 80px 0 50px;
+            margin-bottom: 50px;
+            position: relative;
+        }
+        
+        .hero-header::after { 
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background-color: var(--color-accent);
+            margin: 30px auto 0;
+            border-radius: 2px;
+        }
+
+        .hero-header h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: var(--color-accent);
+            margin-bottom: 15px;
+            letter-spacing: -0.5px;
+        }
+        
+        .hero-header p {
+            font-size: 1.4rem;
+            color: var(--color-secondary);
+            font-weight: 400;
+        }
+
+        /* GENEL BÖLÜM STİLİ */
+        .section {
+            padding: 50px 0;
+        }
+        
+        .section h2 {
+            color: var(--color-secondary);
+            font-size: 2.2rem;
+            font-weight: 600;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        /* MİSYON METNİ */
+        .about-text {
+            color: var(--color-text);
+            font-size: 1.15rem;
+            max-width: 850px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about-text strong {
+            color: var(--color-accent);
+        }
+        
+        /* MAKALE BÖLMELERİ */
+        .post-entry {
+            background-color: var(--color-card);
+            padding: 30px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+            border-left: 5px solid var(--color-accent);
+            transition: all 0.3s ease;
+        }
+        
+        .post-entry:hover {
+            background-color: var(--color-hover-bg); 
+            transform: translateY(-5px); 
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .post-entry h3 {
+            margin-top: 0;
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+        
+        .post-entry h3 a {
+            color: var(--color-text);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .post-entry h3 a:hover {
+            color: var(--color-accent);
+        }
+        
+        .post-meta {
+            color: var(--color-secondary); 
+            font-size: 0.9rem;
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        .read-more {
+            color: var(--color-accent);
+            font-weight: 600;
+            text-decoration: none;
+            transition: letter-spacing 0.2s;
+        }
+        .read-more:hover {
+            letter-spacing: 1px; 
+        }
+
+
+        /* İLETİŞİM / SOSYAL MEDYA BÖLÜMÜ */
+        .social-links {
+            text-align: center;
+            padding-top: 50px;
+            margin-top: 20px;
+            border-top: 1px solid var(--color-border);
+        }
+
+        .social-links a {
+            font-size: 1.2rem;
+            margin: 0 25px;
+            text-transform: uppercase;
+            font-weight: 600;
+            color: var(--color-accent);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <header class="hero-header">
+            <h1>Evren Yazar Analiz</h1>
+            <p>Küresel Ekonomi, Jeopolitik ve Teknolojide Derinlemesine Bakış Açısı</p>
+        </header>
+        
+        <section class="section">
+            <h2>MİSYON</h2>
+            <p class="about-text">
+                Bu platform, güncel olayları yüzeysel siyasi tartışmaların ötesine taşıyarak, <strong>derin tarihsel bağlam</strong> ve <strong>veriye dayalı stratejik analiz</strong> ile incelemek üzere kurulmuştur. Amacımız, okuyuculara karmaşık küresel dinamikleri anlamaları için sağlam, tarafsız ve sofistike bir düşünce çerçevesi sunmaktır.
+            </p>
+        </section>
+        
+        <section class="section">
+            <h2>ÖNE ÇIKAN ANALİZLER</h2>
+            
+            <div class="post-entry">
+                <h3><a href="ai-etigi.html">Yapay Zeka Karar İkilemleri</a></h3>
+                <span class="post-meta">2025-10-06 | Teknoloji, Felsefe</span>
+                <p class="post-excerpt">Yapay zeka sistemlerinin ahlaki seçimleri ve bu kararların insan toplumu üzerindeki etik etkileri. Algoritma yanılıcılığı ve şeffaflık sorunu.</p>
+                <a href="ai-etigi.html" class="read-more">Makaleyi Oku →</a>
+            </div>
+
+            <div class="post-entry">
+                <h3><a href="kuantum.html">Kuantum Çağına Geçiş: Stratejik Avantajın Yeni Tanımı</a></h3>
+                <span class="post-meta">2025-10-07 | Strateji, Teknoloji</span>
+                <p class="post-excerpt">Kuantum teknolojisinin siber güvenlik, finansal modelleme ve uluslararası güç dengeleri üzerindeki kritik etkileri. Yeni Soğuk Savaş'ın bilim cephesi.</p>
+                <a href="kuantum.html" class="read-more">Makaleyi Oku →</a>
+            </div>
+            
+            <div class="post-entry">
+                <h3><a href="roma-enflasyon.html">Antik Roma: Enflasyon Dersi</a></h3>
+                <span class="post-meta">2025-10-04 | Ekonomi, Tarih</span>
+                <p class="post-excerpt">Roma İmparatorluğu'nun para biriminin değerini düşürmesiyle başlayan hiperenflasyon sürecinin, modern merkez bankacılığına ışık tutan dersleri.</p>
+                <a href="roma-enflasyon.html" class="read-more">Makaleyi Oku →</a>
+            </div>
+        </section>
+        
+        <section class="section">
+            <div class="social-links">
+                <a href="mailto:evrenyazar@eposta.com">E-POSTA</a> |
+                <a href="#">LINKEDIN</a> |
+                <a href="#">GITHUB</a>
+            </div>
+        </section>
+
+    </div>
+</body>
+</html>
