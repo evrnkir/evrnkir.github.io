@@ -1,0 +1,257 @@
+/* ----------------------------------------------------
+   GLOBAL AYARLAR VE RENK PALETİ (TÜM SİTE İÇİN)
+   ----------------------------------------------------
+*/
+:root {
+    --color-bg: #1A1A2E;     /* Derin Gece Mavisi Arka Plan */
+    --color-text: #EAEAEA;   /* Yumuşak Beyaz Yazı */
+    --color-accent: #64FFDA; /* Açık Nane Yeşili/Turkuaz Aksan */
+    --color-secondary: #BB86FC; /* Yumuşak Mor Aksan (Başlıklar/Meta) */
+    --color-card: #2C2C45;   /* Kart/Bölme Arka Planı */
+    --color-border: #444466; /* Yumuşak Çizgi */
+    --color-hover-bg: #3C3C5A; /* Hafif Koyu Hover */
+}
+
+/* ----------------------------------------------------
+   TEMEL BODY VE KONTEYNIR AYARLARI
+   ----------------------------------------------------
+*/
+body {
+    font-family: 'Inter', sans-serif; 
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6; /* Ana sayfalar için normal satır aralığı */
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px; /* Ana sayfa genişliği */
+    padding: 60px 20px;
+    margin: 0 auto;
+}
+
+/* Linklerin varsayılan stilini sıfırlama */
+a {
+    color: var(--color-accent);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: var(--color-secondary);
+}
+
+
+/* ----------------------------------------------------
+   BAŞLIK / GİRİŞ (HERO) BÖLÜMÜ
+   ----------------------------------------------------
+*/
+.hero-header {
+    text-align: center;
+    padding: 80px 0 50px;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.hero-header::after { 
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: var(--color-accent);
+    margin: 30px auto 0;
+    border-radius: 2px;
+}
+
+.hero-header h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: var(--color-accent);
+    margin-bottom: 15px;
+    letter-spacing: -0.5px;
+}
+
+.hero-header p {
+    font-size: 1.4rem;
+    color: var(--color-secondary);
+    font-weight: 400;
+}
+
+
+/* ----------------------------------------------------
+   BÖLÜM BAŞLIKLARI VE MİSYON METNİ
+   ----------------------------------------------------
+*/
+.section {
+    padding: 50px 0;
+}
+
+.section h2 {
+    color: var(--color-secondary);
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.about-text {
+    color: var(--color-text);
+    font-size: 1.15rem;
+    max-width: 850px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-text strong {
+    color: var(--color-accent);
+}
+
+/* ----------------------------------------------------
+   MAKALE LİSTELEME (ANA SAYFA)
+   ----------------------------------------------------
+*/
+.post-entry {
+    background-color: var(--color-card);
+    padding: 30px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    border-left: 5px solid var(--color-accent);
+    transition: all 0.3s ease;
+}
+
+.post-entry:hover {
+    background-color: var(--color-hover-bg); 
+    transform: translateY(-5px); 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.post-entry h3 {
+    margin-top: 0;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.post-entry h3 a {
+    color: var(--color-text);
+}
+
+.post-entry h3 a:hover {
+    color: var(--color-accent);
+}
+
+.post-meta {
+    color: var(--color-secondary); 
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 15px;
+}
+
+/* Devamını Oku Linki */
+.read-more {
+    color: var(--color-accent);
+    font-weight: 600;
+    text-decoration: none;
+    transition: letter-spacing 0.2s;
+}
+.read-more:hover {
+    letter-spacing: 1px; 
+}
+
+
+/* ----------------------------------------------------
+   MAKALE İÇERİK SAYFALARI (ai-etigi.html, kuantum.html vb.)
+   ----------------------------------------------------
+*/
+/* Makale sayfaları için konteynır daraltma */
+.article-container {
+    width: 90%;
+    max-width: 900px; 
+    padding: 40px 20px;
+    margin: 0 auto;
+}
+
+.article-body {
+    background-color: var(--color-card);
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.article-body h2 {
+    color: var(--color-secondary);
+    border-left: 4px solid var(--color-accent);
+    padding-left: 15px;
+    font-size: 1.8rem;
+    margin-top: 35px;
+    margin-bottom: 20px;
+}
+
+.article-body h3 {
+    color: var(--color-accent);
+    font-size: 1.4rem;
+    margin-top: 30px;
+}
+
+.article-body p {
+    color: var(--color-text);
+    margin-bottom: 20px;
+    font-size: 1.05rem;
+    line-height: 1.7; /* Makale okuma kolaylığı için artırıldı */
+}
+/* Madde işaretleri (Roma Makalesi için) */
+.article-body ul {
+    list-style: none;
+    padding-left: 20px;
+}
+.article-body ul li:before {
+    content: '→'; /* Özel madde işareti */
+    color: var(--color-accent);
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+
+/* Ana Sayfaya Dön Butonu */
+.home-link {
+    color: var(--color-secondary);
+    background: var(--color-card);
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: all 0.3s;
+    border: 1px solid var(--color-border);
+    display: inline-block; /* Margin-top için gerekli */
+    margin-top: 20px;
+}
+
+.home-link:hover {
+    background: var(--color-hover-bg);
+    color: var(--color-accent);
+    border-color: var(--color-accent);
+}
+
+/* ----------------------------------------------------
+   İLETİŞİM / SOSYAL MEDYA BÖLÜMÜ
+   ----------------------------------------------------
+*/
+.social-links {
+    text-align: center;
+    padding-top: 50px;
+    margin-top: 40px;
+    border-top: 1px solid var(--color-border);
+}
+
+.social-links a {
+    font-size: 1.2rem;
+    margin: 0 25px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--color-accent);
+}
+.social-links a:hover {
+    color: var(--color-secondary);
+}
