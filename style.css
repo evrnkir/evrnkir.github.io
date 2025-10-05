@@ -22,7 +22,7 @@ body {
     color: var(--color-text);
     margin: 0;
     padding: 0;
-    line-height: 1.6; /* Ana sayfalar için normal satır aralığı */
+    line-height: 1.6; 
 }
 
 .container {
@@ -224,7 +224,7 @@ a:hover {
     font-size: 1rem;
     transition: all 0.3s;
     border: 1px solid var(--color-border);
-    display: inline-block; /* Margin-top için gerekli */
+    display: inline-block; 
     margin-top: 20px;
 }
 
@@ -254,4 +254,77 @@ a:hover {
 }
 .social-links a:hover {
     color: var(--color-secondary);
+}
+
+
+/* ----------------------------------------------------
+   İLETİŞİM FORMU STİLLERİ (GELİŞTİRİLMİŞ ORANTI)
+   ----------------------------------------------------
+*/
+.contact-form-section {
+    padding-top: 20px;
+}
+
+.contact-form {
+    max-width: 550px; /* Daha kompakt */
+    margin: 0 auto;
+    padding: 35px; 
+    background-color: var(--color-card);
+    border-radius: 8px; 
+    border: 1px solid var(--color-border); 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 20px;
+    font-weight: 600;
+    color: var(--color-secondary); /* Etiket mora çevrildi */
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid var(--color-border); 
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: var(--color-bg); 
+    color: var(--color-text);
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    resize: vertical; 
+}
+
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus {
+    border-color: var(--color-accent); 
+    box-shadow: 0 0 0 1px var(--color-accent);
+    outline: none;
+}
+
+.contact-form button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 16px; 
+    margin-top: 40px;
+    background-color: var(--color-accent); 
+    color: var(--color-bg); 
+    border: none;
+    border-radius: 4px;
+    font-size: 1.25rem; 
+    font-weight: 800;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+    text-transform: uppercase;
+}
+
+.contact-form button[type="submit"]:hover {
+    background-color: var(--color-secondary); 
+    color: var(--color-text);
+    transform: translateY(-1px);
 }
